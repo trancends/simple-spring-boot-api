@@ -20,9 +20,9 @@ import jakarta.validation.Valid;
 @RequestMapping("/api/runs")
 public class RunController {
 
-  private final RunRepository runRepository;
+  private final JdbcRunRepository runRepository;
 
-  public RunController(RunRepository runRepository) {
+  public RunController(JdbcRunRepository runRepository) {
     this.runRepository = runRepository;
   }
 
@@ -33,7 +33,7 @@ public class RunController {
 
   @GetMapping("/{id}")
   Run findById(@PathVariable Integer id) {
-    Optional<Run> run = runRepository.findbyId(id);
+    Optional<Run> run = runRepository.findById(id);
     if (run.isEmpty()) {
       throw new RunNotFoundException();
     }

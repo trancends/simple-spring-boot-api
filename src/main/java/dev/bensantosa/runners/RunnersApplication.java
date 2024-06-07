@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Bean;
 
 import dev.bensantosa.runners.run.Location;
 import dev.bensantosa.runners.run.Run;
+import dev.bensantosa.runners.run.RunRepository;
 
 @SpringBootApplication
 public class RunnersApplication {
@@ -24,11 +25,11 @@ public class RunnersApplication {
   }
 
   @Bean
-  CommandLineRunner runner() {
+  CommandLineRunner runner(RunRepository runRepository) {
     return args -> {
       Run run = new Run(1, "First Run", LocalDateTime.now(), LocalDateTime.now().plus(1, ChronoUnit.HOURS), 5,
           Location.OUTDOOR);
-      logger.info("Run: {}", run);
+      runRepository.create(run);
     };
   }
 
