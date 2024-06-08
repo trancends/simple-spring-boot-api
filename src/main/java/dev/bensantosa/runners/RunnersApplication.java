@@ -1,18 +1,9 @@
 package dev.bensantosa.runners;
 
-import java.time.LocalDateTime;
-import java.time.temporal.ChronoUnit;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-
-import dev.bensantosa.runners.run.Location;
-import dev.bensantosa.runners.run.Run;
-import dev.bensantosa.runners.run.JdbcClientRunRepository;
 
 @SpringBootApplication
 public class RunnersApplication {

@@ -3,8 +3,6 @@ package dev.bensantosa.runners.run;
 import java.util.List;
 import java.util.Optional;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.Assert;
@@ -12,7 +10,6 @@ import org.springframework.util.Assert;
 @Repository
 public class JdbcClientRunRepository {
 
-  private static final Logger logger = LoggerFactory.getLogger(JdbcRunRepository.class);
   private final JdbcClient jdbcClient;
 
   public JdbcClientRunRepository(JdbcClient jdbcClient) {
