@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Bean;
 
 import dev.bensantosa.runners.run.Location;
 import dev.bensantosa.runners.run.Run;
-import dev.bensantosa.runners.run.RunRepository;
+import dev.bensantosa.runners.run.JdbcClientRunRepository;
 
 @SpringBootApplication
 public class RunnersApplication {

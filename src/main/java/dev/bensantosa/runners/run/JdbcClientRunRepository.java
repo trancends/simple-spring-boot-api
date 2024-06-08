@@ -10,12 +10,12 @@ import org.springframework.stereotype.Repository;
 import org.springframework.util.Assert;
 
 @Repository
-public class JdbcRunRepository {
+public class JdbcClientRunRepository {
 
-  private static final Logger logger = LoggerFactory.getLogger(JdbcClientRunRepository.class);
+  private static final Logger logger = LoggerFactory.getLogger(JdbcRunRepository.class);
   private final JdbcClient jdbcClient;
 
-  public JdbcRunRepository(JdbcClient jdbcClient) {
+  public JdbcClientRunRepository(JdbcClient jdbcClient) {
     this.jdbcClient = jdbcClient;
   }
 
