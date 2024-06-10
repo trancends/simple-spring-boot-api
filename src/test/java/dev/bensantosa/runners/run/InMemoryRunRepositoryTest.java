@@ -20,9 +20,9 @@ public class InMemoryRunRepositoryTest {
   void setUp() {
     repository = new InMemoryRunRepository();
     repository.create(new Run(1, "Monday Morning Run", LocalDateTime.now(),
-            LocalDateTime.now().plusMinutes(30), 6, Location.OUTDOOR, null));
+            LocalDateTime.now().plusMinutes(30), 6, Location.OUTDOOR));
     repository.create(new Run(2, "Wednesday Evening Run", LocalDateTime.now(),
-            LocalDateTime.now().plusMinutes(30), 6, Location.OUTDOOR, null));
+            LocalDateTime.now().plusMinutes(30), 6, Location.OUTDOOR));
   }
 
   @Test
@@ -54,8 +54,7 @@ public class InMemoryRunRepositoryTest {
             LocalDateTime.now(),
             LocalDateTime.now().plusMinutes(30),
             3,
-            Location.INDOOR,
-            null
+            Location.INDOOR
             ));
     List<Run> runs = repository.findAll();
     assertEquals(3, runs.size());
@@ -68,7 +67,7 @@ public class InMemoryRunRepositoryTest {
             LocalDateTime.now(),
             LocalDateTime.now().plusMinutes(30),
             5,
-            Location.OUTDOOR,null), 1);
+            Location.OUTDOOR), 1);
     var run = repository.findById(1).get();
     assertEquals("Monday Morning Run", run.title());
     assertEquals(5, run.miles());

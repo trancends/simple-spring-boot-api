@@ -42,10 +42,8 @@ public class InMemoryRunRepository {
 
   private void init() {
     runs.add(
-        new Run(1, "Run 1 ", LocalDateTime.now(), LocalDateTime.now().plus(1, ChronoUnit.HOURS), 6, Location.INDOOR,
-            null));
+        new Run(1, "Run 1 ", LocalDateTime.now(), LocalDateTime.now().plus(1, ChronoUnit.HOURS), 6, Location.INDOOR));
     runs.add(
-        new Run(2, "Run 2", LocalDateTime.now(), LocalDateTime.now().plus(2, ChronoUnit.HOURS), 10, Location.OUTDOOR,
-            null));
+        new Run(2, "Run 2", LocalDateTime.now(), LocalDateTime.now().plus(2, ChronoUnit.HOURS), 10, Location.OUTDOOR));
   }
 }

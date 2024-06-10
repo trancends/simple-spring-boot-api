@@ -17,7 +17,7 @@ public class JdbcClientRunRepository {
   }
 
   public List<Run> findAll() {
-    return jdbcClient.sql("select * from runs")
+    return jdbcClient.sql("select * from Run")
         .query(Run.class)
         .list();
   }
